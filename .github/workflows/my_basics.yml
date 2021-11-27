@@ -4,7 +4,7 @@ name: My_GitHubActions_Basics
 
 env:
   APPLICATION_NAME: "MyFlask"
-  DEPLOY_PACKAGE_NAME: "Flask_deploy_ver-$({ github.sha })"
+  DEPLOY_PACKAGE_NAME: "Flask_deploy_ver-${{ github.sha }}"
   
   
   
@@ -40,6 +40,7 @@ jobs:
           echo "Hello M1"
           echo "Hello M2"
           echo "Application name: ${{ env.APPLICATION_NAME }}"
+          echo "Package name is ${{ env. DEPLOY_PACKAGE_NAME}}"
           
         
   my_deploy:
