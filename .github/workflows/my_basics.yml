@@ -4,7 +4,7 @@ name: My_GitHubActions_Basics
 
 env:
   APPLICATION_NAME: "MyFlask"
-  PACKAGE_NAME: "Flask_deploy_ver-$({ github.sha })"
+  DEPLOY_PACKAGE_NAME: "Flask_deploy_ver-$({ github.sha })"
   
   
   
@@ -34,6 +34,13 @@ jobs:
       # Runs a single command using the runners shell
       - name: Print Hello Message
         run: echo "Hello world from Build job"
+        
+      - name: Execute few commands
+        run: |
+          echo "Hello M1"
+          echo "Hello M2"
+          echo "Application name $({ env.APPLICATON_NAME )}"
+          
         
   my_deploy:
       runs-on: ubuntu-latest
