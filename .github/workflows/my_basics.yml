@@ -39,7 +39,7 @@ jobs:
         run: |
           echo "Hello M1"
           echo "Hello M2"
-          echo "Application name $({ env.APPLICATON_NAME )}"
+          echo "Application name ${( env.APPLICATON_NAME })"
           
         
   my_deploy:
