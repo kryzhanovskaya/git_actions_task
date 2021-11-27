@@ -50,6 +50,14 @@ jobs:
       steps:
       - name: Print Hello Messag
         run: echo "Hello Word from Deploy job"
+    
+  list:
+     runs-on: ubuntu-latest
+     needs: [my_deploy]
+     
+     steps:
+     - name: List current folder
+       run: ls - la
      
      
      
