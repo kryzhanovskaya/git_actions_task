@@ -29,13 +29,13 @@ jobs:
       - name: Print Hello Message
         run: echo "Hello world from Build job"
         
-    my_deploy:
-     runs-on: ubuntu-latest
-     needs: [build]
+  my_deploy:
+      runs-on: ubuntu-latest
+      needs: [build]
      
-     steps:
-     - name: Print Hello Messag
-       run: echo "Hello Word from Deploy job"
+      steps:
+      - name: Print Hello Messag
+        run: echo "Hello Word from Deploy job"
      
      
      
