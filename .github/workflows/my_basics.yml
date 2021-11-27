@@ -56,9 +56,15 @@ jobs:
      needs: [my_deploy]
      
      steps:
-     - name: List current folder
-       run: ls -la
      
+      - name: Git clone my rep
+        uses: actions/checkout@v1 
+       
+      - name: List current folder
+        run: ls -la
      
+    
+       
+       
      
   
