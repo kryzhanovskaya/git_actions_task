@@ -48,7 +48,7 @@ jobs:
       needs: [build]
      
       steps:
-      - name: Print Hello Messag
+      - name: Print Hello Message
         run: echo "Hello Word from Deploy job"
     
   list:
