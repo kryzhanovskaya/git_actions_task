@@ -2,6 +2,12 @@
 
 name: My_GitHubActions_Basics
 
+env:
+  APPLICATION_NAME: "MyFlask"
+  PACKAGE_NAME: "Flask_deploy_ver-$({ github.sha })"
+  
+  
+  
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
