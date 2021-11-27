@@ -27,6 +27,16 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Print Hello Message
-        run: echo "Hello, world!"
-
-
+        run: echo "Hello world from Build job"
+        
+    my_deploy:
+     runs-on: ubuntu-latest
+     needs: [build]
+     
+     steps:
+     name: Print Hello Messag
+     run: echo "Hello Word from Deploy job"
+     
+     
+     
+  
